@@ -29,6 +29,7 @@ galleryContainer.addEventListener('click', function(event) {
 
     var lightbox = new SimpleLightbox('.gallery a', {
         captions: true,
+        captionsData: 'alt',
         captionSelector: 'img',
         captionPosition: 'bottom',
         captionDelay: 250,
