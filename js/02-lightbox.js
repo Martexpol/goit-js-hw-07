@@ -3,11 +3,9 @@ import { galleryItems } from './gallery-items.js';
 
 const galleryContainer = document.querySelector('.gallery');
 
-
 // Stworzenie galerii
 galleryItems.forEach(item => {
     const listItem = document.createElement('li');
-    // listItem.classList.add('gallery__item');
 
     const link = document.createElement('a');
     link.setAttribute('href', item.original);
@@ -27,16 +25,13 @@ galleryItems.forEach(item => {
 galleryContainer.addEventListener('click', function(event) {
     event.preventDefault();
 
-    var lightbox = new SimpleLightbox('.gallery a', {
+    const lightbox = new SimpleLightbox('.gallery a', {
         captions: true,
         captionsData: 'alt',
         captionSelector: 'img',
         captionPosition: 'bottom',
         captionDelay: 250,
         });
-
-    lightbox.show();
  });
-
 
 
